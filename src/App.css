@@ -1,38 +1,119 @@
 .App {
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading_big {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-image: url('./images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0px;
+  font-size: 30px;
+  color: #1565c0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  position: relative;
+  float: left;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: 500px;
+  box-shadow: #00000033 0px 3px 1px -2px, #00000024 0px 2px 2px 0px, #0000001f 0px 1px 5px 0px;
+  border: 1px solid #1565c0;
+  border-radius: 4px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tableHeader {
+  width: 1200px;
+  height: 30px;
+  color: #ffffff;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #bebef5;
+  box-shadow: #00000033 0px 3px 1px -2px, #00000024 0px 2px 2px 0px, #0000001f 0px 1px 5px 0px;
+  background-color: #1976d2;
+  border-bottom-color: #1565c0;
+  border-radius: 4px;
+}
+
+.headerCell {
+  width: 300px;
+  text-align: center;
+}
+
+.link {
+  width: 1200px;
+  height: 30px;
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.btnLink {
+  width: 300px;
+  height: 30px;
+  color: #ffffff;
+  padding: 10px 0px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #bebef5;
+  box-shadow: #00000033 0px 3px 1px -2px, #00000024 0px 2px 2px 0px, #0000001f 0px 1px 5px 0px;
+  background-color: #1976d2;
+  border-bottom-color: #1565c0;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.link:hover {
+  color: #1976d2;
+  border-bottom: 1px dashed #1565c0;
+}
+
+.link:visited:not(:hover) {
+  color: #000000;
+}
+
+.data {
+  width: 300px;
+  text-align: left;
+}
+
+.detailRow {
+ margin: 5px 0px; 
+}
+
+.name {
+  color: #1565c0;
+}
+
+.website {
+  cursor: pointer;
 }
