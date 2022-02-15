@@ -49,9 +49,10 @@ export default class Details extends React.Component {
 }
 
 
-/* with hooks
+/* with hooks 
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { getData } from '../utils/utils';
 
 function Details() { 
@@ -69,13 +70,16 @@ function Details() {
       <div className='title'>Entry Details</div>
         { details !== [] ?
         <div className='container'>
-          <div className='detailRow name'>{details.name}</div>
-          <div className='detailRow'>User Name: {details.username}</div>
-          <div className='detailRow'>Email: {details.email}</div>
-          <div className='detailRow'>City: {typeof(details.address) == "object" ? details.address.city : null}</div>
-          <div className='detailRow'>Phone No: {details.phone}</div>
-          <div className='detailRow'>Website: <span className='website' onClick={()=>{ window.open('http://'+details.website,'_blank') }}>{details.website}</span></div>
-          <div className='detailRow'>Company: {typeof(details.company) == "object" ? details.company.name : null}</div>
+          <div className='card'>
+            <div className='detailRow name'>{details.name}</div>
+            <div className='detailRow'>User Name: {details.username}</div>
+            <div className='detailRow'>Email: {details.email}</div>
+            <div className='detailRow'>City: {typeof(details.address) == "object" ? details.address.city : null}</div>
+            <div className='detailRow'>Phone No: {details.phone}</div>
+            <div className='detailRow'>Website: <span className='website name' onClick={()=>{ window.open('http://'+details.website,'_blank') }}>{details.website}</span></div>
+            <div className='detailRow'>Company: {typeof(details.company) == "object" ? details.company.name : null}</div>
+          </div>
+          <Link className='btnLink' to='/home'>Back to Entry List</Link>
         </div> 
         : null }
     </div>
